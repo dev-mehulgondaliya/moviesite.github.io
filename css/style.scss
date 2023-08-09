@@ -1,0 +1,103 @@
+// some variabel
+$bg-color:rgb(0,99,177);
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: $bg-color;
+}
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+#search{
+    width: 50%;
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    position: relative;
+    padding:0px 15px;
+
+    &:focus{
+        border: none;
+        outline: none;
+    }
+
+}
+
+
+#reset-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 27%;
+    border: none;
+    background: none;
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+
+
+
+
+#search::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#movie-box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    transition: 2s ease;
+    overflow: hidden;
+    transition: all 3s ease;
+
+    &:hover .card-body{
+        opacity: 1;
+        transition: all .7s ease-in-out;
+    }
+
+    .card-body{
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        z-index: 1;
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+
+
+.card img{
+    object-fit: cover;
+    height: 400px;
+
+}
+
+
+
+.card-text{
+    text-align: justify;
+}
